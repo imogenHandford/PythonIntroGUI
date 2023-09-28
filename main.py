@@ -28,17 +28,22 @@ def rms(data):
     
 
 def load_patient_file(path):
-    # code to load data goes here
-    pass
+    #to be loaded by file path chosen
+    dfPat=pd.read_excel(path)
+    State.patient = dfPat
+    return dfPat
 
     
 def load_control_file(path):
     # code to load data goes here
-    pass
+    dfCon = pd.read_excel(path)
+    State.control = dfCon
+    return dfCon
 
     
 def calc_GPS():
     # code to load data goes here
+
     data=[]
     col=[]
     try:
